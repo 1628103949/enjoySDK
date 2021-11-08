@@ -1,0 +1,286 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.enjoy.sdk.demo">
+    <!-- SDK 相关 start -->
+    <!-- 添加必要的权限支持 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <application
+        android:name=".testApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="Enjoy Demo"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity
+            android:name="com.enjoy.sdk.demo.DemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:launchMode="standard"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- JunS sdk components start -->
+        <!--下面是SDK的相关配置，复制到游戏工程内-->
+
+        <!--防止非https访问时在安卓9.0上出错-->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <!--targetSdkVersion小于24时需要此配置，否则刘海屏幕UI展示有问题-->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHFunctionPopActivity"
+            android:theme="@style/mch_MyFunctionDialogStyle" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHelperCenter"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHelperDetActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHBalanceActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHWelfareActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHMsgActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHMsgDetActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHGiftDetActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHNoticeDialogActivity"
+            android:theme="@style/mch_MyFunctionDialogStyle" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHBindMailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHUserCenterActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHPayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHExchangePtbActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHRecordExchangeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHPayPTBActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHPayRecordActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHManagementAccountActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHChooseAccountActivity"
+            android:theme="@style/mch_MyFunctionDialogStyle" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHCouponMyActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHCouponAllActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHShareActivity"
+            android:theme="@style/mch_MCHTransparent" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHQQShareActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHWeChatShareActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHPacksActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHChangePasswordActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHMoneyRecordActivity"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHGameRecordActivity"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHBindPhoneActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHVisitorUpdateInfo"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <service android:name="com.mchsdk.paysdk.utils.MCHLolly" />
+
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHForgetPasswordActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHSocialActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHListViewActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHCommunicateActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHDiscountRebateActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHTransparencyActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@style/mch_MCHTransparent" />
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHToCertificateActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHThirdLoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/mch_MCHTransparent" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHControlResActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@style/mch_MCHTransparent" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHWapPayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.MCHWebviewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 插件功能相关 -->
+        <activity
+            android:name="com.mchsdk.plugin.qg.utils.UpVersionDialog"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/mch_MyFunctionDialogStyle" />
+        <activity
+            android:name="com.mchsdk.plugin.vip.activity.MCHGradeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+
+        <!-- qq -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent111111" />
+            </intent-filter>
+        </activity>
+        <!-- 在某些低端机上调用登录后，由于内存紧张导致APP被系统回收，登录成功后无法成功回传数据 -->
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 微博 -->
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 支付宝 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.mchsdk.paysdk.activity.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/mch_MCHTransparent" />
+
+        <!-- 巨量 -->
+        <activity android:name="com.bytedance.applog.util.SimulateLaunchActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 表示该页面可以被隐式调用，必须加上该项 -->
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- 协议部分 -->
+                <data
+                    android:host="rangersapplog"
+                    android:path="/picker"
+                    android:scheme="rangersapplog.byax6uyt" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.bytedance.applog.collector.Collector"
+            android:enabled="true"
+            android:exported="false" />
+        <!-- 巨量 -->
+        <activity-alias android:name="${applicationId}.wxapi.WXEntryActivity" android:exported="true" android:targetActivity="com.mchsdk.paysdk.activity.WXEntryActivity"/>
+
+
+    </application>
+</manifest>

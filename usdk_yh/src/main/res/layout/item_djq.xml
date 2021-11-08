@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="0dp"
+    android:layout_weight="7"
+    android:background="#EBEBEB"
+    android:orientation="vertical"
+    android:layout_height="100dp"
+    >
+    <TextView
+        android:id="@+id/item_djq_gamename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="烽火三国"
+        />
+    <TextView
+        android:id="@+id/item_djq_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:textColor="#000000"
+        android:layout_marginTop="10dp"
+        android:text="有效期：2019-02-05"
+        />
+    <TextView
+        android:id="@+id/item_djq_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:textColor="#000000"
+        android:layout_marginTop="10dp"
+        android:text="满100元可用"
+        />
+
+</LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_height="100dp"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        >
+
+        <TextView
+            android:id="@+id/item_djq_rmb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:text="36.0"
+            android:layout_centerInParent="true"
+            />
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="元"
+            android:visibility="gone"
+            android:textColor="#000000"
+            android:layout_below="@+id/item_djq_rmb"
+            />
+        <ImageView
+            android:id="@+id/item_djq_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/wancms_djq_yes"
+            />
+    </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

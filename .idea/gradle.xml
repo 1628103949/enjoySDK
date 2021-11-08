@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/enjoysdk_core" />
+            <option value="$PROJECT_DIR$/enjoysdk_core_app" />
+            <option value="$PROJECT_DIR$/enjoysdk_test" />
+            <option value="$PROJECT_DIR$/mid_oaid1.0.10" />
+            <option value="$PROJECT_DIR$/mid_oaid1.0.13" />
+            <option value="$PROJECT_DIR$/sdk_H5_VIEW" />
+            <option value="$PROJECT_DIR$/sdk_framework" />
+            <option value="$PROJECT_DIR$/usdk_bh" />
+            <option value="$PROJECT_DIR$/usdk_nalan" />
+            <option value="$PROJECT_DIR$/usdk_u8" />
+            <option value="$PROJECT_DIR$/usdk_yh" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

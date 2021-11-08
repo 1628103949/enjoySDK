@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/wancms_gift_bg"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/item_gift_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="新手礼包"
+        android:textColor="#ffff802f"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/gift_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_gift_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="12dp"
+        android:text="礼包码 : "
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/item_gift_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_gift_name"
+        android:layout_marginTop="10dp"
+        android:textSize="12dp"
+        android:layout_toRightOf="@+id/gift_name"
+        android:text="bzcqxsk666"
+        android:textColor="#FF6905" />
+
+    <TextView
+        android:id="@+id/item_gift_title"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gift_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="元宝2000，龙珠200，武将碎片30，宝石碎片50"
+        android:textColor="#ff8d8d8d"
+        android:layout_marginBottom="10dp"
+        android:textSize="10dp" />
+
+    <TextView
+        android:id="@+id/item_gift_fuzhi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/round_fuzhi_orange"
+        android:text="复制"
+        android:textColor="@color/white"
+        android:textSize="11dp" />
+</RelativeLayout>

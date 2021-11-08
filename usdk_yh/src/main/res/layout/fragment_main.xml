@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.wancms.sdk.ui.CustomDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainfragment_sidebar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainFragment" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <!-- <RelativeLayout -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="200dp" -->
+            <!-- android:background="#FF7800"> -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/iv_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:background="#FF7800"
+                    android:src="@drawable/wancms_main_background" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginTop="20dp" >
+
+                        <TextView
+                            android:id="@+id/switch_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:text="切换账号"
+                            android:textColor="#ffffff" />
+
+                        <ImageView
+                            android:id="@+id/main_coin"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/wancms_heat_img" />
+
+                        <TextView
+                            android:id="@+id/main_user"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/main_coin"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toLeftOf="@id/switch_text"
+                            android:layout_toRightOf="@id/main_coin"
+                            android:singleLine="true"
+                            android:text="玩家JX06raws"
+                            android:textColor="#ffffff"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/main_ttb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/main_coin"
+                            android:layout_alignLeft="@id/main_user"
+                            android:text="平台币 ：0个   "
+                            android:textColor="#ffffff" />
+
+                        <ImageView
+                            android:id="@+id/main_renzheng"
+                            android:layout_width="80dp"
+                            android:layout_height="30dp"
+                            android:layout_alignBottom="@id/main_ttb"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/main_authentication_img" />
+
+                        <TextView
+                            android:id="@+id/main_gold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/main_user"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="25dp"
+                            android:background="@drawable/round_mainfragment_top5"
+                            android:text="任务中心"
+                            android:textColor="#ffffff"
+                            android:textSize="11dp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/main_ttb"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/round_mainfragment_top"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <View
+                                android:layout_width="5dp"
+                                android:layout_height="15dp"
+                                android:background="#EF5651" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="平台专属活动"
+                                android:textColor="#000000"
+                                android:textSize="15dp" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/mian_re_huodong"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginTop="15dp" >
+
+                            <TextView
+                                android:id="@+id/main_activity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:textColor="#000000"
+                                android:textSize="13dp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:src="@drawable/wancms_jiantou_tt" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/round_mainfragment_top"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <View
+                                android:layout_width="5dp"
+                                android:layout_height="15dp"
+                                android:background="#EF5651" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:text="充值福利"
+                                android:textColor="#000000"
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/main_fanli_text1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/mancms_go_pay"
+                                android:gravity="center"
+                                android:paddingBottom="1dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text="申请福利"
+                                android:textColor="@color/white"
+                                android:textSize="12dp"
+                                android:visibility="visible" />
+
+                            <Button
+                                android:id="@+id/main_fanli_text2"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@drawable/new_down_bg1"
+                                android:text="点我提交福利申请"
+                                android:textColor="#ffffff"
+                                android:textSize="15dp"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="请在充值24小时后向客服提交福利申请哦！"
+                            android:textColor="#FF7F00"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/main_fanli"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:ellipsize="end"
+                            android:maxLines="4"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="13dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/main_fanli_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:text="查看所有福利"
+                                android:textColor="#FF7F00"
+                                android:textSize="12dp" />
+
+                            <ImageView
+                                android:id="@+id/main_jiantou"
+                                android:layout_width="18dp"
+                                android:layout_height="12dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/wancms_jiantou_button"
+                                android:visibility="gone" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/round_mainfragment_top"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:orientation="horizontal" >
+
+                            <View
+                                android:layout_width="5dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="#EF5651" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="10dp"
+                                android:text="资讯攻略"
+                                android:textColor="#000000"
+                                android:textSize="15dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/main_li_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="15dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/main_li1_tag"
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/wancms_green_bg"
+                                android:gravity="center"
+                                android:paddingBottom="2dp"
+                                android:paddingLeft="3dp"
+                                android:paddingRight="3dp"
+                                android:paddingTop="2dp"
+                                android:text="攻略"
+                                android:textColor="#ffffff"
+                                android:textSize="13dp" />
+
+                            <TextView
+                                android:id="@+id/main_gonglue1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="8.2"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="13dp" />
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="20dp"
+                                android:layout_weight="0.5"
+                                android:src="@drawable/wancms_jiantou_tt" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/main_li_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="15dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/main_li2_tag"
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/wancms_green_bg"
+                                android:gravity="center"
+                                android:paddingBottom="2dp"
+                                android:paddingLeft="3dp"
+                                android:paddingRight="3dp"
+                                android:paddingTop="2dp"
+                                android:text="攻略"
+                                android:textColor="#ffffff"
+                                android:textSize="13dp" />
+
+                            <TextView
+                                android:id="@+id/main_gonglue2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="8.2"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="13dp" />
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="20dp"
+                                android:layout_weight="0.5"
+                                android:src="@drawable/wancms_jiantou_tt" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/main_li_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="15dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/main_li3_tag"
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/wancms_green_bg"
+                                android:gravity="center"
+                                android:paddingBottom="2dp"
+                                android:paddingLeft="3dp"
+                                android:paddingRight="3dp"
+                                android:paddingTop="2dp"
+                                android:text="攻略"
+                                android:textColor="#ffffff"
+                                android:textSize="13dp" />
+
+                            <TextView
+                                android:id="@+id/main_gonglue3"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="8.2"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="#000000"
+                                android:textSize="13dp" />
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="20dp"
+                                android:layout_weight="0.5"
+                                android:src="@drawable/wancms_jiantou_tt" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/main_gonglue_more"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="查看更多"
+                            android:textColor="#FF7F00"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/wancms_mainfragment_re2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="#ffffff"
+        android:clickable="true" >
+
+        <fragment
+            android:id="@+id/main_fragment1"
+            android:name="com.wancms.sdk.ui.GongLueFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+</com.wancms.sdk.ui.CustomDrawerLayout>

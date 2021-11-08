@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/trumpet_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="选择小号"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <View
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/trumpet_title"
+        android:layout_marginTop="5dp"
+        android:background="@color/gray1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_view"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:id="@+id/trumpet_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="注销"
+            android:textColor="#555555"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/trumpet_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="username"
+            android:textColor="@color/orange"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/trumpet_username"
+            android:text=",欢迎回来"
+            android:textSize="15dp" />
+
+        <View
+            android:id="@+id/username_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/trumpet_username"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray1" />
+
+        <TextView
+            android:id="@+id/trumpet_choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/username_view"
+            android:layout_marginTop="15dp"
+            android:text="选择小号进入游戏"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/trumpet_add"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/username_view"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/orange"
+            android:text="添加"
+            android:textColor="@color/common_white" />
+
+
+        <TextView
+            android:id="@+id/trumpet_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trumpet_choice"
+            android:layout_marginTop="15dp"
+            android:text="可创建10个小号，创建后不可删除和修改"
+            android:textColor="@color/gray"
+            android:textSize="12dp" />
+
+        <RelativeLayout
+            android:id="@+id/trumpet_re1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trumpet_hint">
+
+            <TextView
+                android:id="@+id/trumpet_activity_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_fuzhi_orange"
+                android:text="最新活动"
+                android:textColor="@color/common_white"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/trumpet_fanli_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/round_fuzhi_orange"
+                android:text="  充值福利  "
+                android:textColor="@color/common_white"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/trumpet_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trumpet_re1">
+
+        </ListView>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

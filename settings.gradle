@@ -1,0 +1,12 @@
+include ':sdk_H5_VIEW'
+include ':enjoysdk_test'
+include ':sdk_framework'
+include ':enjoysdk_core'
+include ':enjoysdk_core_app'
+include ':mid_oaid1.0.10'
+include ':usdk_u8'
+rootProject.name = "enjoySDK"
+include ':mid_oaid1.0.13'
+include ':usdk_bh'
+include ':usdk_nalan'
+include ':usdk_yh'
